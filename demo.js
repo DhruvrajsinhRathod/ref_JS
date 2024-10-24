@@ -1,11 +1,15 @@
-// Write a JavaScript function that reverses a number.
-// Sample Data and output:
-// Example x = 32243;
-// Expected Output: 34223
-
-function revNumber(n) {
-  let x = n.toString();
-  return x.split("").reverse().join("");
+// Write a JavaScript function that checks whether a passed string is palindrome or not?
+function check_Palindrome(x) {
+  let start = 0;
+  let end = x.length - 1;
+  while (end > start) {
+    if (x[start] != x[end]) {
+      return false;
+    }
+    start++;
+    end--;
+  }
+  return true;
 }
 
-console.log(revNumber(123));
+console.log(check_Palindrome("madam"));
